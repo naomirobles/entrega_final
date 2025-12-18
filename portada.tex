@@ -1,0 +1,53 @@
+\begin{tikzpicture}[remember picture, overlay]
+    % 1. Fondo base
+    \fill[aruBg] (current page.south west) rectangle (current page.north east);
+
+    % 2. Elementos decorativos (Orbes Pastel)
+    \fill[aruPurple!30] (current page.north east) circle (7cm);
+    \fill[aruPurple!70] (current page.south west) ++(2,-2) circle (8cm);
+    \fill[aruPurple!50] (current page.center) ++(5,-8) circle (5cm);
+
+    % 3. Tarjeta Glassmorphism
+    \node[
+        shift={(0,0)},
+        fill=white,
+        fill opacity=0.6,
+        text opacity=1,
+        draw=white,
+        draw opacity=0.8,
+        line width=1.5pt,
+        rounded corners=30pt,
+        minimum width=14cm,
+        minimum height=18cm,
+        blur shadow={shadow blur steps=15, shadow blur radius=10pt, shadow xshift=5pt, shadow yshift=-5pt, shadow opacity=15}
+    ] at (current page.center) (card) {};
+
+    % 4. Contenido de la Tarjeta
+    \node[anchor=north, text width=12cm, align=center] at (card.north) [yshift=-2.5cm] {
+        {\color{aruPurple}\Huge\bfseries aru:taskmanager} \\
+        \vspace{1.5cm}
+        {\color{aruText}\fontsize{22}{30}\selectfont \textbf{Documentación de Proyecto}} \\
+        \vspace{0.8cm}
+        {\color{aruPurple!80}\Large \faIcon{project-diagram} \ Ingeniería de Software para Sistemas Inteligentes}
+    };
+
+    \node[anchor=center, text width=10cm, align=center] at (card.center) [yshift=0.5cm] {
+
+        \vspace{0.5cm} \\
+        {\color{aruText}\large Profesor: Chadwick Carreto Arellano \\ | \ 6to semestre \ | \ IPN\ | \ ESCOM}
+    };
+
+    \node[anchor=south, text width=10cm, align=center] at (card.south) [yshift=2.5cm] {
+        {\color{aruText}\textbf{Presentado por:}} \\
+        {\color{aruPurple!90}\Large Robles Guzmán Naomi Isabel \\ Ugalde Téleez Aarón} \\
+        \vspace{1cm}
+        {\color{aruText!60}\small \today \ | \ Ciudad de México}
+    };
+
+    % 5. Logo o Decoración adicional inferior
+    \node at (card.south) [yshift=1cm] {
+        \tikz \fill[aruPurple] (0,0) circle (5pt); \hspace{2pt} \tikz \fill[aruPurple!50] (0,0) circle (5pt); \hspace{2pt} \tikz \fill[aruPurple!20] (0,0) circle (5pt);
+    };
+
+\end{tikzpicture}
+\newpage

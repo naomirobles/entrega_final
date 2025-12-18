@@ -1,0 +1,187 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{aru_style}[2023/10/27 Estilo Aru Task Manager]
+
+% ==================== PAQUETES ====================
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{booktabs} 
+\usepackage{siunitx}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
+\usepackage{tikz}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[many]{tcolorbox}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome5}
+\RequirePackage{helvet}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{textcase} % Para manejo avanzado de mayúsculas/minúsculas
+\renewcommand{\familydefault}{\sfdefault} % Usar Helvetica (similar a la imagen)
+\definecolor{dkgreen}{rgb}{0,0.6,0} 
+\definecolor{gray}{rgb}{0.5,0.5,0.5} 
+\definecolor{verde}{rgb}{0.18,0.549,0.2}
+\definecolor{rojo}{rgb}{1, 0.302, 0.431}
+\definecolor{black}{rgb}{0, 0, 0}
+\definecolor{blue}{rgb}{0, 0.4648, 0.71}
+\definecolor{charcoal}{RGB}{54,69,79}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}          % Verde para comentarios
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}       % Gris para números de línea
+\definecolor{codepurple}{rgb}{0.58,0,0.82}     % Púrpura para strings
+\definecolor{backcolour}{rgb}{0.98,0.98,0.99}  % Color de fondo
+\definecolor{keywordcolor}{rgb}{0,0.59,0.61}   % Color para palabras clave (class, def, etc.)
+\definecolor{titlecolor}{rgb}{0.53,0,0}        % Color para títulos de clases y funciones
+\definecolor{stringcolor}{rgb}{0,0.36,0.37}    % Color para strings
+\definecolor{commentcolor}{rgb}{0.58,0.65,0.65} % Color para comentarios
+
+% Definir el estilo para el código
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{keywordcolor},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{stringcolor},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    emph={class,def,__init__,return,import}, % Palabras clave adicionales
+    emphstyle=\color{titlecolor},            % Estilo para palabras clave adicionales
+    morekeywords={class,def,__init__,return,import}, % Añadir palabras clave
+     % ahora añadimos los símbolos faltantes
+}
+
+\lstset{style=mystyle}
+% --- Paleta de Colores ---
+\definecolor{aruPurple}{HTML}{9381DA}
+\definecolor{aruBg}{HTML}{F8F9FE}
+\definecolor{aruText}{HTML}{4A4A4A}
+\definecolor{pastelPink}{HTML}{FDE7F9}
+\definecolor{pastelBlue}{HTML}{E7F3FD}
+% Colores de las categorías
+\definecolor{catCalculo}{HTML}{FDE7E7}
+\definecolor{catHistoria}{HTML}{E7FDF3}
+\definecolor{catEconomia}{HTML}{FFF4E5}
+\definecolor{catIngles}{HTML}{FDE7F9}
+
+\makeatletter
+\renewcommand{\section}[1]{%
+  \refstepcounter{section}%
+  \par\bigskip
+  \noindent
+  \begin{tcolorbox}[
+    colback=aruPurple,
+    colframe=aruPurple,
+    arc=10pt,
+    sharp corners=north,
+    boxrule=0pt,
+    left=15pt,
+    right=15pt,
+    top=12pt,
+    bottom=12pt,
+    width=\linewidth
+  ]
+    {\color{white}\Large\bfseries\sffamily
+      \faListUL\quad\thesection.\quad #1
+    }
+  \end{tcolorbox}
+  \par\medskip
+}
+\makeatother
+
+
+% --- Subsecciones con número (ej: 1.1 aru:taskmanager) ---
+\titleformat{\subsection}
+  {\color{aruPurple}\sffamily\huge\bfseries} % Formato general
+  {\thesubsection} % Aquí incluimos el número de la subsección
+  {1em} % Espacio entre el número y el texto
+  {} % Aplicamos minúsculas solo al título
+  []
+
+% --- Subsubsecciones con número (ej: 1.1.1 módulos) ---
+\titleformat{\subsubsection}
+  {\color{aruPurple!80}\sffamily\Large\bfseries}
+  {\thesubsubsection}
+  {1em}
+  {\lowercase}
+  []
+
+% Re-ajuste de espaciado para acomodar los números
+\titlespacing*{\subsection}{0pt}{3.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{2.5ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+
+
+% --- Configuración de Título Estilo Banner ---
+\newcommand{\makeAruHeader}[1]{
+    \begin{tcolorbox}[colback=aruPurple, colframe=aruPurple, arc=10pt, sharp corners=north, 
+                      top=15pt, bottom=15pt, left=20pt]
+        \textcolor{white}{\Large\bfseries \faListUL \quad #1}
+        \hfill
+        \textcolor{white!80}{\small }
+    \end{tcolorbox}
+}
+
+
+
+% --- Entorno para las "Secciones" (Columnas de Materias) ---
+\newtcolorbox{aruSeccion}[2]{
+    enhanced,
+    title={\large\bfseries #1},
+    coltitle=aruText,
+    attach boxed title to top left={xshift=5mm, yshift=-3mm},
+    boxed title style={colback=white, colframe=white, arc=5pt},
+    colback=#2,
+    colframe=white,
+    arc=15pt,
+    width=0.98\textwidth,
+    nobeforeafter,
+    bottom=10pt,
+    top=10pt
+}
+
+% --- Entorno para las "Tareas" (Tarjetas blancas internas) ---
+\newtcolorbox{aruTarea}[2]{
+    enhanced,
+    colback=white,
+    colframe=white,
+    arc=8pt,
+    boxrule=0pt,
+    shadow={2pt}{-2pt}{0pt}{black!5}, % Sombra suave
+    title={\small\bfseries #1},
+    coltitle=black,
+    attach title to top left={yshift=-2mm},
+    fonttitle=\bfseries,
+    after title={\hfill \faRegCircle}, % Círculo de checkbox
+    fontupper=\scriptsize,
+    top=8mm
+}

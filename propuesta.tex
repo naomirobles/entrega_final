@@ -1,0 +1,259 @@
+
+
+%%%%%%%%%%%%%%%%% INTRODUCCIÓN %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Antecedentes}
+En la web puede consultarse una gran variedad de recursos multimedia que tienen el potencial de contribuir al proceso de enseñanza-aprendizaje \autocite{Deco2010}.Este material de aprendizaje es accesible a través de repositorios como MERLOT (Multimedia Educational Resource for Learning and Online Teaching)\autocite{MERLOT} o el Repositorio Institucional de la Universidad Nacional Autónoma de México\autocite{UNAM2021}, o bien en sitios web como \emph{Khan Academy} o incluso \emph{Youtube}.
+\\\\
+Los metadatos descriptivos de cada objeto multimedia permiten recuperar los artículos que están relacionados con el tema de consulta\autocite{Deco2010}, estos elementos son cruciales para los motores de búsqueda que usan sistemas recomendadores. Dichos sistemas se encargan de explorar y filtrar las mejores opciones a partir de el tema de consulta y el perfil del usuario\autocite{Caballar2025}. El  principal objetivo de estas aplicaciones es ayudar al usuario a gestionar sus compromisos temporales y reducir el estrés causado por la sobrecarga cognitiva \autocite{Okuboyejo2019}.
+\\\\
+Por otro lado las aplicaciones de gestión de tareas permiten al usuario registrar pendientes en forma de lista y categorizarlas según su naturaleza, su funcionamiento central consiste en que, tras cumplir una tarea en la vida real, el usuario la marca como completada en la aplicación, proporcionando así una sensación de progreso y control sobre sus respondabilidades\autocite{Diefenbach2019}.
+\\\\
+El desarrollo de Inteligencia Artificial Generativa ha ocasionado cierta preocupación con respecto a la integridad académica de los alumnos. En este contexto la UNESCO  aprobó en noviembre de 2021 la \emph{Recomendación sobre ética de la inteligencia artificial}, la primera norma mundial sobre la ética de la IA adoptada por los 193 Estados miembros. Entre las temáticas tratadas se encuentra la apuesta por la promoción de las “competencias previas”\autocite{Torres2023} como lo son la alfabetización, competencias digitales y de codificación, pensamiento crítico, etc. Esto implica, que los estudiantes aprendan a consultar contenido multimedia y discernir información relevante para sus tareas académicas.
+\vspace{0.7cm}
+
+\section{Problemática}
+Actualmente existe una brecha entre las aplicaciones de gestión de tareas y los contenidos en la web. Si bien hay múltiples aplicaciones para organización y planeamiento de tareas, estas no ofrecen un acompañamiento al usuario sobre cómo llevar a cabo sus tareas en el entorno académico.
+\\\\
+Asimismo, tanto la educación básica como superior se está viendo mermada en los últimos años por los modelos de Inteligencia Artificial generativa, que si bien han fungido como una herramienta importante para la enseñanza-aprendizaje, también han tenido un impacto negativo sobre las habilidades de pensamiento crítico y abstracción de la comunidad estudiantil.
+\vspace{0.7cm}
+\pagebreak
+\section{Propuesta de solución}
+El proyecto plantea el desarrollo de una aplicación web responsiva de gestión de tareas académicas y profesionales que integre un motor de recomendaciones educativas basado en análisis de palabras clave.
+\\\\
+El sistema contará con un CRUD de tareas con categorización básica, permitiendo que el usuario registre y organice sus pendientes. Posteriormente, mediante técnicas de procesamiento de lenguaje natural (PLN), se identificarán palabras clave en la descripción de cada tarea. Estas palabras se emplearán para consultar contenido educativo y obtener recursos relevantes en tiempo real.
+\\\\
+El motor de recomendaciones aplicará un proceso de filtrado que considera métricas de calidad (popularidad, calificación, duración adecuada) y ofrecerá sugerencias personalizadas en español e inglés. Asimismo, el sistema contará con un aprendizaje básico basado en el historial de interacciones del usuario (por ejemplo, clics en recursos recomendados), con el fin de mejorar progresivamente la pertinencia de los resultados.
+\\\\
+De esta manera, la aplicación no solo permitirá organizar tareas, sino también ofrecerá un puente directo hacia recursos educativos gratuitos o de acceso público, alineando planificación y ejecución en un mismo entorno.
+\vspace{0.7cm}
+\section{Características}
+
+\subsection {Características lógicas}
+\begin{itemize}
+  \item \textbf{Gestión de tareas y hábitos} -- Permite crear, editar, eliminar y agrupar tareas y hábitos.
+  \item \textbf{Recomendaciones por tarea} -- Al crear o editar una tarea, el sistema genera 3--5 recursos relevantes (URLs + título del recurso). 
+  \item \textbf{Registro e inicio de sesion} -- La aplicacion permitira registrarse e iniciar sesion con el fin de añadir contexto a las recomendaciones
+  \item \textbf{Ingreso de contexto a las recomendaciones: } -- Permite el ingreso de diferentes datos con el fin de aumentar la calidad en las recomendaciones, los datos se ingresan al registrar una cuenta, estos datos son:
+  \begin{itemize}
+      \item Ubicacion
+      \item Edad
+      \item Area de interes
+  \end{itemize}
+\end{itemize}
+
+\subsection{Características físicas}
+\begin{itemize}
+  \item \textbf{Despliegue local} -- Despliegue local en una computadora con los requerimientos necesarios 
+  \item \textbf{Base de datos} -- PostgreSQL administrado o contenedor. 
+\end{itemize}
+
+
+
+\section{Recursos requeridos}
+
+\subsection{Humanos}
+\begin{itemize}
+    \item Desarrollador Frontend (HTML, CSS, JS, Tailwind) 
+    \item Desarrollador Backend (Node.js)
+    \item Ingeniero de ML / Recomendaciones (NLP, LLM's)
+    \item Diseñador UX/UI (wireframes, prototipos, accesibilidad) 
+    \item Tester / QA (pruebas funcionales y de usabilidad)
+\end{itemize}
+
+\subsection{Materiales}
+\begin{itemize}
+    \item Una computadora por desarrollador con las siguientes caracteristicas minimas:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|p{3.5cm}|p{9cm}|}
+        \hline
+        Procesador: & Intel Core i3 de 7ª generación o AMD equivalente (2 núcleos, 2.0 GHz o más). \\
+        \hline
+         Memoria RAM: & al menos 4 GB  \\
+        \hline
+        Almacenamiento: & 128 GB SSD. \\
+        \hline
+        \end{tabular}
+        \label{tab:TABLA}
+    \end{table}
+
+    \item El desarrollador de ML, tiene que tener una computadora con las caracteristicas necesarias para probar diferentes modelos de LLMS.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|p{3.5cm}|p{9cm}|}
+        \hline
+        Procesador: &Intel Core i5/i7 de 8ª generación o AMD Ryzen 5/7 (al menos 4 núcleos físicos).\\
+        \hline
+         Memoria RAM: &  Mínimo: 16 GB RAM  \\
+        \hline
+        Almacenamiento: & 256 GB SSD \\
+        \hline
+        Tarjeta Gráfica: & GPU con 6 GB VRAM (ejemplo: NVIDIA GTX 1660 Ti, RTX 2060).\\
+        \hline  
+        \end{tabular}
+        \label{tab:TABLA}
+    \end{table}
+    
+    \item De momento, se alojara la aplicacion en un entorno local, por lo que las caracteristicas para alojar la aplicación son parecidas al de desarrollador de ML.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|p{3.5cm}|p{9cm}|}
+        \hline
+        Procesador: &Intel Core i5/i7 de 8ª generación o AMD Ryzen 5/7 (al menos 4 núcleos físicos).\\
+        \hline
+         Memoria RAM: &  Mínimo: 16 GB RAM  \\
+        \hline
+        Almacenamiento: & 256 GB SSD \\
+        \hline
+        Tarjeta Gráfica: & GPU con 6 GB VRAM (ejemplo: NVIDIA GTX 1660 Ti, RTX 2060).\\
+        \hline  
+        \end{tabular}
+        \label{tab:TABLA}
+    \end{table}
+\end{itemize}
+
+
+
+\pagebreak
+\section{Planeación}
+
+\subsection{Objetivos}
+
+\begin{itemize}
+    \item Desarrollar un sistema que permita al usuario registrar sus habitos y tareas diarias
+    \item Añadir espacios para que el usuario agregue datos que sirvan de contexto para las recomendaciones inteligentes.
+    \item Implementar un modulo que realice recomendaciones inteligentes sobre como realizar los habitos y tareas registradas
+    \item Realizar una interfaz intuitiva y atractiva que permita añadir las tareas y habitos de manera facil
+\end{itemize}
+
+
+\subsection{Alcances}
+\begin{itemize}
+    \item Registro y seguimiento de tareas/hábitos.
+    \item Algoritmo básico de recomendaciones personalizadas.
+    \item Panel de visualización del progreso.
+    \item Registro de usuarios
+    \item Inicio de sesion
+    \item Seccion de añadir datos para el contexto
+\end{itemize}
+
+\begin{landscape}
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    x unit=0.192cm,             % ancho por semana (ajusta si lo quieres más/menos)
+    y unit chart=0.7cm,
+    time slot format=isodate,
+    time slot unit=day,       % unidad = semana
+    milestone/.append style={fill=red!75, draw=red!90, inner sep=1pt},
+    % Estilos globales y "bonitos"
+    bar/.style={fill=blue!55, draw=blue!85, rounded corners=2pt},
+    group/.style={draw=black, fill=gray!12, rounded corners=2pt, font=\small\bfseries},
+    %title label font=\small\bfseries,
+    %bar label font=\scriptsize,
+    %bar height=0.6
+]{2025-09-03}{2025-12-21}
+
+    % Encabezados: mes (fila superior) y semanas (fila inferior)
+    \gantttitlecalendar{month=shortname} \\
+    \gantttitlecalendar{week} \\
+
+    % Sprints (grupos) y tareas (todas usan el estilo global 'bar')
+    \ganttgroup{Sprint 1}{2025-09-03}{2025-09-15} \\
+    \ganttbar{Requerimientos}{2025-09-03}{2025-09-10} \\
+    \ganttbar{Diseño inicial}{2025-09-11}{2025-09-15} \\
+
+    \ganttgroup{Sprint 2}{2025-09-16}{2025-09-30} \\
+    \ganttbar{Base de datos}{2025-09-16}{2025-09-23} \\
+    \ganttbar{Maquetacion}{2025-09-24}{2025-09-30} \\
+
+    \ganttgroup{Sprint 3}{2025-10-01}{2025-10-15} \\
+    \ganttbar{Registro de tareas}{2025-10-01}{2025-10-10} \\
+    \ganttbar{Seguimiento de hábitos}{2025-10-11}{2025-10-15} \\
+
+    \ganttgroup{Sprint 4}{2025-10-16}{2025-10-31} \\
+    \ganttbar{Pruebas de LLMS}{2025-10-16}{2025-10-25} \\
+    \ganttbar{Recomendaciones iniciales}{2025-10-26}{2025-10-31} \\
+
+    \ganttgroup{Sprint 5}{2025-11-01}{2025-11-15} \\
+    \ganttbar{Frontend}{2025-11-01}{2025-11-15} \\
+
+    \ganttgroup{Sprint 6}{2025-11-16}{2025-11-30} \\
+    \ganttbar{Integración}{2025-11-16}{2025-11-24} \\
+    \ganttbar{Pruebas unitarias}{2025-11-25}{2025-11-30} \\
+
+    \ganttgroup{Sprint 7}{2025-12-01}{2025-12-21} \\
+    \ganttbar{Pruebas finales}{2025-12-01}{2025-12-10} \\
+    \ganttbar{Ajustes y entrega}{2025-12-11}{2025-12-21} \\
+
+    % Hito final
+    \ganttmilestone{Entrega Final}{2025-12-21}
+
+\end{ganttchart}
+\end{landscape}
+
+\section{Costo del proyecto}
+
+\subsection*{Supuestos}
+\begin{itemize}
+  \item Sueldo mensual (\textbf{Full-Stack, junior}): \(\$1{,}436\) USD.
+  \item Tasa de cambio usada: \(1\ \text{USD} = 18.66\ \text{MXN}\).
+  \item Sueldo mensual Full-Stack (convertido): \autocite{talently-fullstack-2024}
+    \[
+      1{,}436 \times 18.66 = \text{MXN }26{,}795.76
+    \]
+  \item Sueldo mensual (\textbf{ML Engineer, junior}): \(\text{MXN }43{,}000.00\). \autocite{glassdoor-ml-salary-2025}
+  \item Duración del proyecto: \(T = 3.5\) meses.
+  \item Recursos materiales: \textbf{solo el estimado de las 2 computadoras} usadas por los ingenieros.
+    \begin{itemize}
+      \item Computadora Full-Stack (estimado): \(\text{MXN }25{,}000.00\).
+      \item Computadora ML Engineer (estimado, más potente): \(\text{MXN }40{,}000.00\).
+      \item \textbf{RecursosMateriales} = 25{,}000.00 + 40{,}000.00 = \(\text{MXN }65{,}000.00\).
+    \end{itemize}
+  \item Fórmula:
+    \[
+      \text{Costo total} = \text{RecursosMateriales} + \text{RecursosHumanos} \times \text{Tiempo}
+    \]
+\end{itemize}
+
+\subsection*{Cálculo paso a paso}
+
+\paragraph{1) Recursos humanos (costo mensual total)}
+\[
+\begin{aligned}
+\text{RecursosHumanos} &= \text{Sueldo}_{\text{FullStack}} + \text{Sueldo}_{\text{ML}} \\
+&= 26{,}795.76 + 43{,}000.00 \\
+&= \text{MXN }69{,}795.76 \quad(\text{por mes})
+\end{aligned}
+\]
+
+\paragraph{2) Costo de recursos humanos para } \(T=3.5\) \text{ meses}
+\[
+\begin{aligned}
+\text{RecursosHumanos} \times T &= 69{,}795.76 \times 3.5 \\
+&= \text{MXN }244{,}285.16
+\end{aligned}
+\]
+
+\paragraph{3) Costo total (incluyendo recursos materiales)}
+\[
+\begin{aligned}
+\text{Costo total} &= \text{RecursosMateriales} + (\text{RecursosHumanos} \times T) \\
+&= 65{,}000.00 + 244{,}285.16 \\
+&= \text{MXN }309{,}285.16
+\end{aligned}
+\]
+
+\paragraph{4) Conversión aproximada a USD (usando 1 USD = 18.66 MXN)}
+\[
+\begin{aligned}
+\text{Costo total (USD)} &= \frac{309{,}285.16}{18.66} \\
+&\approx \$16{,}574.77\ \text{USD}
+\end{aligned}
+\]
+
+\subsection*{Resultado final}
+\[
+\boxed{\text{Costo total estimado} = \text{MXN }309{,}285.16 \approx \text{USD }16{,}574.77}
+\]
+
