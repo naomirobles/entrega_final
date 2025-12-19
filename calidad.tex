@@ -1,0 +1,75 @@
+\section{Calidad}
+La calidad del software es un concepto multidimensional que incluye atributos como rendimiento, usabilidad, fiabilidad, mantenibilidad y seguridad. En sistemas web, el rendimiento percibido por el usuario es un factor determinante, ya que impacta directamente en la experiencia de uso y en la aceptación del sistema.
+
+
+En este contexto, las métricas de rendimiento web permiten evaluar de manera objetiva el comportamiento del sistema bajo condiciones reales de uso. Vercel Speed Insights surge como una herramienta que facilita la recolección y análisis de dichas métricas, permitiendo integrarlas dentro de un proceso sistemático de evaluación de la calidad del software.
+
+
+\subsection{¿Qué es Vercel Speed Insights?}
+Vercel Speed Insights es un conjunto de productos y paquetes que permiten recolectar, visualizar y analizar métricas de rendimiento web (core web vitals y otras). Se integra de forma natural con aplicaciones desplegadas en la plataforma Vercel y dispone de un paquete npm (\texttt{@vercel/speed-insights}) con adaptadores para frameworks populares.
+
+
+\subsection{Métricas principales}
+Las métricas que normalmente recoge y comunica Speed Insights son las mismas que las que se usan en la industria para evaluar experiencia de carga y estabilidad visual. Entre las más relevantes:
+\begin{itemize}
+\item \textbf{First Contentful Paint (FCP)}: tiempo hasta que el navegador pinta el primer elemento de contenido.
+\item \textbf{Largest Contentful Paint (LCP)}: tiempo hasta que se pinta el elemento de contenido más grande visible inicialmente.
+\item \textbf{Cumulative Layout Shift (CLS)}: medida de la estabilidad visual (desplazamientos inesperados de contenido).
+\item \textbf{Interaction to Next Paint (INP) / First Input Delay (FID)}: tiempos de respuesta a interacción del usuario (la industria está migrando a INP como métrica más representativa).
+\end{itemize}
+
+
+Asimismo, Speed Insights permite agrupar los percentiles (p75, p90, p95, p99) para comprender la experiencia típica y la de cola larga.
+
+
+\subsection{Integración básica}
+A continuación un ejemplo simple de integración en Next.js (sintaxis ilustrativa):
+
+
+\begin{lstlisting}
+// instalar
+// npm install @vercel/speed-insights
+
+
+// app/layout.tsx (Next.js)
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
+
+export default function RootLayout({ children }) {return (
+    <html>
+        <head />
+        <body>
+            <SpeedInsights sampleRate={0.1} />
+            {children}
+        </body>
+    </html>
+)}
+\end{lstlisting}
+
+
+En producción, el paquete recoge métricas de usuarios reales y las envía a la plataforma de Vercel, donde se visualizan en el panel de observabilidad.
+
+
+\subsection{Interpretación como criterios de calidad de software}
+Transformar métricas de rendimiento en criterios de calidad implica mapear números a atributos y decisiones. Algunos ejemplos:
+\begin{enumerate}
+\item \textbf{Rendimiento (performance)}: objetivos medibles como "LCP p75 < 2.5s" o "INP p95 < 200ms" se convierten en requisitos no funcionales que el equipo debe satisfacer.
+\item \textbf{Usabilidad / Experiencia de usuario}: altos valores de CLS indican problemas de estabilidad visual que afectan la percepción de calidad y confianza del usuario.
+\item \textbf{Regresión y despliegues}: Speed Insights ligado a cada despliegue permite detectar regresiones de rendimiento introducidas por cambios de código. Se puede bloquear un merge si el score de rendimiento cae por debajo de un umbral definido.
+\item \textbf{Priorización técnica}: las recomendaciones (optimizar imágenes, reducir JS, mejorar caching) ayudan a priorizar tareas del backlog que tendrán mayor impacto en la experiencia real.
+\item \textbf{Monitorización continua}: medir percentiles y tendencias permite verificar si las mejoras tienen efecto y si las nuevas funcionalidades degradan la experiencia.
+\end{enumerate}
+
+
+\subsection{Buenas prácticas y recomendaciones}
+\begin{itemize}
+\item Definir SLAs/SLIs basados en percentiles (por ejemplo, LCP p75 < 2.5s en región objetivo).
+\item Instrumentar un \emph{sampleRate} razonable para equilibrar coste/ruido de datos.
+\item Vincular alertas y pipelines CI a las métricas importantes para evitar regresiones en despliegues.
+\item Complementar Speed Insights con pruebas de laboratorio (Lighthouse, WebPageTest) para diagnóstico profundo y reproducible.
+\item Aplicar acciones concretas: lazy-loading, optimización de imágenes, code-splitting, caching en CDN, reducir render-blocking JS/CSS.
+\end{itemize}
+
+
+\subsection{Limitaciones}
+Speed Insights, como cualquier herramienta que recoge datos reales, tiene limitaciones: muestra agregados de usuarios reales que pueden depender de la geografía, velocidad de red del usuario, dispositivos y muestreo. Además, algunas recomendaciones requieren análisis manual para decidir si su coste de implementación compensa la mejora observada.
