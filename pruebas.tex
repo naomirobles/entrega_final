@@ -1,0 +1,53 @@
+\section{Pruebas de Calendario}
+
+\subsection{Navegación del Calendario (e2e/calendar/navigation.spec.ts)}
+\begin{itemize}
+    \item \textbf{Acceso al calendario autenticado:} Verifica que un usuario autenticado pueda acceder a la página del calendario.
+    \item \textbf{Navegación entre meses:} Comprueba que el usuario pueda moverse al mes siguiente y anterior utilizando los botones de navegación del calendario.
+\end{itemize}
+
+\subsection{Vistas del Calendario (e2e/calendar/views.spec.ts)}
+\begin{itemize}
+    \item \textbf{Cambio entre vistas:} Asegura que el usuario pueda cambiar entre la vista de mes y la vista de lista.
+    \item \textbf{Búsqueda en vista de lista:} Verifica que la funcionalidad de búsqueda de tareas esté operativa en la vista de lista.
+    \item \textbf{Filtro por categoría:} Comprueba que el usuario pueda filtrar tareas por categoría en la vista de lista.
+\end{itemize}
+
+\section{Pruebas de Categorías}
+
+\subsection{Creación de Categorías (e2e/categories/create.spec.ts)}
+\begin{itemize}
+    \item \textbf{Crear nueva categoría:} Verifica que un usuario pueda crear una nueva categoría proporcionando un nombre y seleccionando un color.
+    \item \textbf{Crear categoría con color personalizado:} Asegura que se pueda crear una categoría utilizando un color personalizado.
+\end{itemize}
+
+\subsection{Eliminación de Categorías (e2e/categories/delete.spec.ts)}
+\begin{itemize}
+    \item \textbf{Eliminar categoría sin tareas:} Comprueba que una categoría que no tiene tareas asociadas pueda ser eliminada.
+    \item \textbf{Confirmación antes de eliminar:} Verifica que se muestre un diálogo de confirmación antes de proceder con la eliminación de una categoría.
+\end{itemize}
+
+\subsection{Edición de Categorías (e2e/categories/edit.spec.ts)}
+\begin{itemize}
+    \item \textbf{Editar categoría existente:} Asegura que un usuario pueda editar el nombre y el color de una categoría existente.
+    \item \textbf{Cambiar solo el color:} Verifica que se pueda cambiar únicamente el color de una categoría sin modificar su nombre.
+\end{itemize}
+
+\section{Pruebas de Tareas}
+
+\subsection{Recomendaciones de IA (e2e/tasks/ai-recommendations.spec.ts)}
+\begin{itemize}
+    \item \textbf{Generar recomendaciones:} Comprueba que el sistema pueda generar recomendaciones de IA para una tarea específica.
+\end{itemize}
+
+\subsection{Creación de Tareas (e2e/tasks/create.spec.ts)}
+\begin{itemize}
+    \item \textbf{Crear nueva tarea:} Verifica que un usuario pueda crear una nueva tarea con un título, categoría y descripción.
+    \item \textbf{Crear tarea con fecha de inicio:} Asegura que se pueda crear una tarea especificando una fecha de inicio.
+\end{itemize}
+
+\subsection{Edición de Tareas (e2e/tasks/edit.spec.ts)}
+\begin{itemize}
+    \item \textbf{Editar tarea existente:} Comprueba que un usuario pueda editar el título y la descripción de una tarea existente.
+\end{itemize}
+
