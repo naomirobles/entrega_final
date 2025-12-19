@@ -3,347 +3,225 @@
 
 %%%%%%%%%%%%%%%%% CUERPO %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Requerimientos Funcionales}
+Los requisitos de \textit{software} establecen las especificaciones detalladas que definen qué debe hacer un sistema, cómo debe 
+ comportarse y bajo qué condiciones debe operar \autocite{Requirements2024}. Este documento  tiene como propósito establecer de
+ manera precisa y completa todas las funcionalidades, características y restricciones que deberá cumplir el sistema de gestión de
+ tareas académicas y profesionales, garantizando así el desarrollo de una solución que satisfaga plenamente las necesidades identificadas. 
 \begin{table}[H]
     \centering
-    \begin{tabular}{|p{2cm}|p{13cm}|}
-    \hline
-    \multicolumn{2}{|c|}{\textbf{1. Cuenta e Inicio de Sesión}} \\
-    \hline
-    \textbf{Clave} & \textbf{Descripción } \\
-    \hline
-    RF1.1 & El sistema permite al usuario crear una cuenta ingresando correo electrónico, contraseña,
-     país de origen y último grado de estudios. \\
-     \hline
-    RF1.2 & El sistema permite al usuario iniciar sesión con su correo electrónico y contraseña registradas. \\
-    \hline
-    RF1.3 & El sistema permite al usuario recuperar su contraseña mediante un correo electrónico de recuperación.\\
-    \hline
-    RF1.4 & El sistema permite al usuario ver y actualizar su perfil, incluyendo nombre, foto de perfil, país de origen y último grado de estudios. \\
-    \hline
-    RF1.5 & El sistema permite al usuario terminar su sesión.\\
-    \hline
-    \multicolumn{2}{|c|}{\textbf{2. Registro de Tareas}} \\
-    \hline
-    RF2.1 & Dado un usuario autenticado, al dar clic en "Nueva tarea", el sistema abre un modal donde el usuario puede ingresar el título, descripción
-     y fecha de vencimiento de la tarea. \\
-    \hline
-    RF2.2 & Tras ingresar los datos de la tarea, al dar clic en "Guardar", el sistema almacena la tarea en la base de datos con la etiqueta de "Todo".\\
-    \hline
-    RF2.3 & Al registrar una tarea además de especificar la fecha límite de la tarea, el usuario puede especificar el plazo en el que desea realizarla, es decir,
-     los días en el que desea trabajar en la tarea. \\
-    \hline
-    RF2.4 & Dado un usuario con tareas registradas en el mes, cuando abre la vista mensual, entonces cada día muestra una etiqueta/contador con las tareas 
-    y al hacer clic se ve el detalle y acceso para editar. \\
-    \hline
-    RF2.5 & El sistema permite al usuario modificar tareas. \\
-    \hline
-    RF2.6 & El sistema permite al usuario eliminar tareas. \\
-    \hline
-    \end{tabular}
+    \begin{tablaRequisitos}{Requisitos Funcionales (Bloque 1)}
+        \seccionTabla{1. Cuenta e Inicio de Sesión}
+        \filaBlanca \textbf{Clave} & \textbf{Descripción} \\
+        \filaGris RF1.1 & El sistema permite al usuario crear una cuenta ingresando correo electrónico, contraseña, país de origen y último grado de estudios. \\
+        \filaBlanca RF1.2 & El sistema permite al usuario iniciar sesión con su correo electrónico y contraseña registradas. \\
+        \filaGris RF1.3 & El sistema permite al usuario recuperar su contraseña mediante un correo electrónico de recuperación. \\
+        \filaBlanca RF1.4 & El sistema permite al usuario ver y actualizar su perfil, incluyendo nombre, foto de perfil, país de origen y último grado de estudios. \\
+        \filaGris RF1.5 & El sistema permite al usuario terminar su sesión. \\
+        
+        \seccionTabla{2. Registro de Tareas}
+        \filaBlanca RF2.1 & Dado un usuario autenticado, al dar clic en "Nueva tarea", el sistema abre un modal donde el usuario puede ingresar el título, descripción y fecha de vencimiento. \\
+        \filaGris RF2.2 & Tras ingresar los datos de la tarea, al dar clic en "Guardar", el sistema almacena la tarea con la etiqueta de "Todo". \\
+        \filaBlanca RF2.3 & El usuario puede especificar el plazo (días de trabajo) además de la fecha límite. \\
+        \filaGris RF2.4 & Vista mensual con etiquetas/contadores de tareas y acceso al detalle al hacer clic. \\
+        \filaBlanca RF2.5 & El sistema permite al usuario modificar tareas. \\
+        \filaGris RF2.6 & El sistema permite al usuario eliminar tareas.
+    \end{tablaRequisitos}
     \label{tab:requisitos-funcionales-1}
 \end{table}
 
-%%%%
 \begin{table}[H]
     \centering
-    \begin{tabular}{|p{2cm}|p{13cm}|}
-    \hline
-    \multicolumn{2}{|c|}{\textbf{2. Registro de Tarea}} \\
-    \hline
-    \textbf{Clave} & \textbf{Descripción } \\
-    \hline
-    RF2.7 & Al registrar o editar una tarea el usuario puede crear una categoría para la misma.\\
-    \hline
-    RF2.8 & El sistema permite al usuario ver las tareas organizadas por categorías. \\
-    \hline
-    RF2.9 & Al registrar o editar una tarea el usuario puede elegir una categoría existente para clasificarla.\\
-    \hline
-    RF2.10 & Las tareas con plazo se mostrarán como una etiqueta sobre la vista de calendario en los días especificados.\\
-    \hline
-    RF2.11 & El sistema permite al usuario marcar tareas como completadas. \\
-    \hline
-    RF2.12 & Una tarea que haya sido marcada como completada, se vera en la vista de calendario con una línea horizontal sobre el título de la tarea.\\
-    \hline
-    \multicolumn{2}{|c|}{\textbf{3. Recomendación de recursos para consulta}} \\
-    \hline
-    RF3.1 & Al agregar una tarea, el sistema genera recomendaciones de consulta (enlaces a artículos, video o páginas web).  \\
-    \hline
-    RF3.2 & El sistema genera recomendaciones con base al titulo de la tarea y al grado académico que el usuario ingresó al crear la cuenta.\\   
-    \hline
-    RF3.3 & El usuario puede guardar las sugerencias de consulta, haciendo que aparezcan cada vez que abre el detalle de la tarea.\\
-    \hline
-    RF3.4 & El sistema permite al usuario indicar si una recomendación de consulta no fue útil para él, el sistema tomará esta opinicón en
-    cuenta para próximas recomendaciones. \\
-    \hline
-    \end{tabular}
+    \begin{tablaRequisitos}{Requisitos Funcionales (Bloque 2)}
+        \seccionTabla{2. Registro de Tarea (Continuación)}
+        \filaBlanca \textbf{Clave} & \textbf{Descripción} \\
+        \filaGris RF2.7 & El usuario puede crear categorías personalizadas al registrar o editar tareas. \\
+        \filaBlanca RF2.8 & El sistema permite visualizar tareas organizadas por categorías. \\
+        \filaGris RF2.9 & Selección de categorías existentes para clasificación de tareas. \\
+        \filaBlanca RF2.10 & Las tareas con plazo se muestran como etiquetas sobre el calendario en los días especificados. \\
+        \filaGris RF2.11 & El sistema permite marcar tareas como completadas. \\
+        \filaBlanca RF2.12 & Las tareas completadas muestran una línea horizontal sobre el título en la vista de calendario. \\
+
+        \seccionTabla{3. Recomendación de recursos para consulta}
+        \filaGris RF3.1 & Generación automática de recomendaciones (enlaces, videos, artículos) al agregar tareas. \\
+        \filaBlanca RF3.2 & Recomendaciones basadas en el título de la tarea y el grado académico del usuario. \\
+        \filaGris RF3.3 & El usuario puede guardar sugerencias para que aparezcan en el detalle de la tarea. \\
+        \filaBlanca RF3.4 & Sistema de feedback para que el usuario indique si una recomendación fue útil.
+    \end{tablaRequisitos}
     \caption{Requisitos funcionales consolidados para el sistema de gestión de tareas académicas y profesionales}
     \label{tab:requisitos-funcionales-2}
 \end{table}
+
 %--------------
+
 \pagebreak
+
 \section{Requerimientos No Funcionales}
+
 \begin{table}[H]
+
     \centering
+
     \begin{tabular}{|p{3cm}|p{12cm}|}
+
     \hline
+
     \multicolumn{2}{|c|}{\textbf{Requerimientos No Funcionales (RNF)}} \\
+
     \hline
+
     \textbf{Categoría} & \textbf{Descripción} \\
+
     \hline
-    Rendimiento & \textbf{RNF1} Las operaciones de interacción básica en la interfaz (abrir modal, guardar/editar tarea, navegar entre vistas) deberán responder en menos de \textbf{300 ms} en el 95\% de las peticiones bajo carga nominal. \\ 
+
+    Rendimiento & \textbf{RNF1} Las operaciones de interacción básica en la interfaz (abrir modal, guardar/editar tarea, navegar entre vistas) deberán responder en menos de \textbf{300 ms} en el 95\% de las peticiones bajo carga nominal. \\
+
     \hline
-    Disponibilidad & \textbf{RNF2} El sistema deberá garantizar una disponibilidad mínima del \textbf{99.5\%} mensualmente (excluyendo ventanas de mantenimiento programado). \\ 
+
+    Disponibilidad & \textbf{RNF2} El sistema deberá garantizar una disponibilidad mínima del \textbf{99.5\%} mensualmente (excluyendo ventanas de mantenimiento programado). \\
+
     \hline
+
     Seguridad & \textbf{RNF3} Autenticación segura (contraseñas almacenadas con hashing). \newline
+
                 \textbf{RNF3} Todas las comunicaciones entre cliente y servidor deben estar cifradas mediante protocolo HTTPS. \newline
-                \textbf{RNF3} Los usuarios deben autenticarse mediante credenciales seguras y el sistema debe implementar bloqueo tras 3 intentos fallidos. \\ 
+
+                \textbf{RNF3} Los usuarios deben autenticarse mediante credenciales seguras y el sistema debe implementar bloqueo tras 3 intentos fallidos. \\
+
     \hline
+
     Usabilidad & \textbf{RNF4} Interfaz intuitiva y consistente; realizar las principales acciones (crear tarea, marcar completada, editar) en \textbf{máximo 3 clics}. \newline
-                \textbf{RNF4} Soporte móvil y escritorio. \\ 
+
+                \textbf{RNF4} Soporte móvil y escritorio. \\
+
     \hline
-    Compatibilidad & \textbf{RNF5} Funcionamiento garantizado en navegadores modernos: Chrome, Firefox, Edge y Safari; versión adaptada para navegadores móviles equivalentes. \\ 
+
+    Compatibilidad & \textbf{RNF5} Funcionamiento garantizado en navegadores modernos: Chrome, Firefox, Edge y Safari; versión adaptada para navegadores móviles equivalentes. \\
+
     \hline
-    Mantenibilidad & \textbf{RNF6} Código modular y documentado.\\ 
+
+    Mantenibilidad & \textbf{RNF6} Código modular y documentado.\\
+
     \hline
+
     Respaldo y Rendimiento & \textbf{RNF7} Copias de seguridad automáticas de la base de datos con retención mínima de \textbf{30 días}. \newline
-                             \textbf{RNF7} El sistema debe soportar al menos 100 usuarios concurrentes sin degradación del rendimiento.\\ 
+
+                             \textbf{RNF7} El sistema debe soportar al menos 100 usuarios concurrentes sin degradación del rendimiento.\\
+
     \hline
-    Recomendaciones & \textbf{RNF8} Las recomendaciones generadas al crear una tarea deberán presentarse en pantalla en menos de \textbf{5 segundos}.\\ 
+
+    Recomendaciones & \textbf{RNF8} Las recomendaciones generadas al crear una tarea deberán presentarse en pantalla en menos de \textbf{5 segundos}.\\
+
     \hline
+
     Legal y Ética & \textbf{RNF9} Incluir términos y condiciones y política de privacidad. \newline
-                   \textbf{RNF9} Las recomendaciones deben evitar contenidos que violen derechos de autor o políticas de contenido inapropiado. \\ 
+
+                   \textbf{RNF9} Las recomendaciones deben evitar contenidos que violen derechos de autor o políticas de contenido inapropiado. \\
+
     \hline
+
     \end{tabular}
+
     \caption{Requerimientos no funcionales principales}
+
     \label{tab:nfr}
+
 \end{table}
 
-\pagebreak
+%%%%%%%%%%%%%%%
 \section{Historias de Usuario}
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Registro de tareas\\
-    \hline
-    \textbf{Descripción: }Como profesional, necesito asignar fechas límite y estimar el tiempo que me tomará cada tarea para planificar mejor mi agenda y 
-    cumplir con mis compromisos.\\
-    \hline
-    \textbf{Resultado: } Tareas programadas con fechas límite y tiempo estimado.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede establecer fecha límite y duración estimada, y el sistema muestra indicadores visuales para 
-    tareas próximas a vencer o vencidas.\\
-    \hline
-    \end{tabular}
-    \caption{Programación de tareas con fechas}
-    \label{user-story1}
-\end{table}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Registro de usuarios\\
-    \hline
-    \textbf{Descripción: }Como profesional, necesito registrarme en la aplicación para poder acceder a mi lista de tareas registradas en diferentes momentos y  mediante distintos
-     dispositivos.\\
-    \hline
-    \textbf{Resultado: } Registro de usuario que sirve como enlace al almacenamiento de las tareas.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede registrar un correo electrónico y una contraseña, para crear una cuenta en la aplicación. Además al registrarse, podrá 
-    ingresar datos como último grado académico y país de origen para una experiencia más personalizada.\\
-    \hline
-    \end{tabular}
-    \caption{Registro de cuenta e inicio de sesión}
-    \label{user-story1_1}
-\end{table}
+% 1. Registro de tareas
+\begin{tablaHistoria}{Historia: Registro de tareas}
+    \filaBlanca Descripción & Como profesional, necesito asignar fechas límite y estimar el tiempo para planificar mejor mi agenda. \\
+    \filaGris Resultado & Tareas programadas con fechas límite y tiempo estimado. \\
+    \filaBlanca Criterio & El usuario establece fecha límite y duración; el sistema muestra indicadores visuales de vencimiento.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Modificación de tareas existentes\\
-    \hline
-    \textbf{Descripción: }Como usuario, necesito editar las tareas existentes para actualizar su información, cambiar fechas límite 
-    o modificar descripciones según cambien mis necesidades.\\
-    \hline
-    \textbf{Resultado: }Tarea modificada con la información actualizada.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede editar cualquier campo de sus tareas existentes, guardar los cambios y ver la 
-    información actualizada inmediatamente en todas las vistas.\\
-    \hline
-    \end{tabular}
-    \caption{Modificación de tareas existentes}
-    \label{user-story2}
-\end{table}
+% 2. Registro de usuarios
+\begin{tablaHistoria}{Historia: Registro de usuarios}
+    \filaBlanca Descripción & Como profesional, necesito registrarme para acceder a mi lista desde distintos dispositivos. \\
+    \filaGris Resultado & Registro de usuario que sirve como enlace al almacenamiento de las tareas. \\
+    \filaBlanca Criterio & Registro con correo y contraseña. Incluye ingreso de grado académico y país para personalización.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Eliminación de tareas\\
-    \hline
-    \textbf{Descripción: }Como usuario, necesito eliminar tareas que ya no son relevantes o fueron 
-    creadas por error para mantener mi lista organizada.\\
-    \hline
-    \textbf{Resultado: } Tarea eliminada permanentemente del sistema.\\
-    \hline
-    \textbf{Criterio de aceptación: }El usuario puede eliminar una tarea mediante confirmación, y esta 
-    desaparece de todas las vistas sin posibilidad de recuperación.\\
-    \hline
-    \end{tabular}
-    \caption{Eliminación de tareas}
-    \label{user-story3}
-\end{table}
+% 3. Modificación
+\begin{tablaHistoria}{Historia: Modificación de tareas existentes}
+    \filaBlanca Descripción & Como usuario, necesito editar tareas para actualizar información o cambiar fechas según mis necesidades. \\
+    \filaGris Resultado & Tarea modificada con la información actualizada inmediatamente. \\
+    \filaBlanca Criterio & El usuario puede editar cualquier campo y guardar los cambios exitosamente.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Visualización mensual de tareas\\
-    \hline
-    \textbf{Descripción: }Como usuario con múltiples tareas, necesito ver todas mis tareas distribuidas en un calendario mensual 
-    para tener una perspectiva clara de mi carga de trabajo.\\
-    \hline
-    \textbf{Resultado: } Vista de calendario mostrando todas las tareas del mes.\\
-    \hline
-    \textbf{Criterio de aceptación: }El usuario puede acceder a una vista de calendario que muestra las tareas en sus fechas 
-    correspondientes, con posibilidad de hacer clic para ver detalles o editar.\\
-    \hline
-    \end{tabular}
-    \caption{Vista de calendario mensual}
-    \label{user-story3}
-\end{table}
+% 4. Eliminación
+\begin{tablaHistoria}{Historia: Eliminación de tareas}
+    \filaBlanca Descripción & Como usuario, necesito eliminar tareas que ya no son relevantes para mantener mi lista organizada. \\
+    \filaGris Resultado & Tarea eliminada permanentemente del sistema. \\
+    \filaBlanca Criterio & El usuario elimina mediante confirmación; la tarea desaparece de todas las vistas.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Creación de categorías personalizadas\\
-    \hline
-    \textbf{Descripción: }Como usuario, necesito crear categorías personalizadas para clasificar
-     mis tareas según mis propios criterios de organización (trabajo, personal, estudio, materias, etc.).\\
-    \hline
-    \textbf{Resultado: } Nuevas categorías creadas y disponibles para asignar a tareas.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede crear y asignar categorías con nombre único y color }
-    distintivo, y estas aparecen disponibles al crear o editar tareas.\\
-    \hline
-    \end{tabular}
-    \caption{Creación de categorías personalizadas}
-    \label{user-story4}
-\end{table}
+% 5. Vista Mensual
+\begin{tablaHistoria}{Historia: Visualización mensual de tareas}
+    \filaBlanca Descripción & Como usuario, necesito ver mis tareas en un calendario mensual para entender mi carga de trabajo. \\
+    \filaGris Resultado & Vista de calendario mostrando todas las tareas del mes. \\
+    \filaBlanca Criterio & Calendario interactivo donde al hacer clic se ve el detalle o acceso para editar.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Visualización selectiva de tareas\\
-    \hline
-    \textbf{Descripción: }Como usuario con muchas tareas, necesito filtrar mi lista por categorías 
-    específicas para enfocarme solo en las tareas de un tipo particular.\\
-    \hline
-    \textbf{Resultado: } Vista de tareas filtrada según la categoría seleccionada.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede seleccionar una o múltiples categorías y ver solo las tareas 
-    correspondientes, con opción de limpiar filtros para ver todas las tareas.\\
-    \hline
-    \end{tabular}
-    \caption{Filtrado por categorías}
-    \label{user-story5}
-\end{table}
+% 6. Categorías
+\begin{tablaHistoria}{Historia: Creación de categorías personalizadas}
+    \filaBlanca Descripción & Como usuario, necesito crear categorías (trabajo, personal, etc.) para clasificar mis tareas. \\
+    \filaGris Resultado & Nuevas categorías creadas y disponibles para asignar. \\
+    \filaBlanca Criterio & Categorías con nombre único y color distintivo disponibles al crear o editar tareas.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Información detallada de tareas\\
-    \hline
-    \textbf{Descripción: }Como usuario, necesito agregar notas, instrucciones detalladas o comentarios adicionales a
-     mis tareas para recordar información importante o pasos específicos.\\
-    \hline
-    \textbf{Resultado: } Tareas con información adicional almacenada.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede agregar texto libre en un campo de notas que se guarda 
-    con la tarea y es visible al editarla o revisarla.\\
-    \hline
-    \end{tabular}
-    \caption{Notas adicionales en tareas}
-    \label{user-story6}
-\end{table}
+% 7. Filtrado
+\begin{tablaHistoria}{Historia: Visualización selectiva de tareas}
+    \filaBlanca Descripción & Como usuario, necesito filtrar mi lista por categorías para enfocarme en un tipo de tarea particular. \\
+    \filaGris Resultado & Vista de tareas filtrada según la categoría seleccionada. \\
+    \filaBlanca Criterio & Opción de seleccionar múltiples categorías y limpiar filtros fácilmente.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: }Sugerencias automáticas de recursos académicos\\
-    \hline
-    \textbf{Descripción: }Como estudiante o profesional, necesito recibir recomendaciones automáticas de artículos, videos o 
-    recursos web relacionados con mis tareas para apoyar mi investigación y aprendizaje.\\
-    \hline
-    \textbf{Resultado: }Lista de recursos recomendados generados automáticamente.\\
-    \hline
-    \textbf{Criterio de aceptación: } Al crear o ver una tarea, el sistema genera y muestra 3-5 recursos relevantes
-     (enlaces, artículos, videos) basados en el título y descripción de la tarea.\\
-    \hline
-    \end{tabular}
-    \caption{Recomendaciones de recursos de consulta}
-    \label{user-story7}
-\end{table}
+% 8. Notas
+\begin{tablaHistoria}{Historia: Información detallada de tareas}
+    \filaBlanca Descripción & Como usuario, necesito agregar notas o instrucciones detalladas a mis tareas. \\
+    \filaGris Resultado & Tareas con información adicional almacenada correctamente. \\
+    \filaBlanca Criterio & Campo de texto libre para notas, visible al editar o revisar la tarea.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Recomendaciones personalizadas por perfil\\
-    \hline
-    \textbf{Descripción: }Como usuario con un perfil académico específico, necesito recibir recomendaciones de 
-    recursos y organización adaptadas a mi nivel de estudios y área de especialización.\\
-    \hline
-    \textbf{Resultado: } Recomendaciones personalizadas según el perfil del usuario.\\
-    \hline
-    \textbf{Criterio de aceptación: } El sistema utiliza la información del perfil académico del usuario (grado de estudios, 
-    área de especialización) para generar recomendaciones más precisas y apropiadas para su nivel.\\
-    \hline
-    \end{tabular}
-    \caption{Recomendaciones personalizadas por perfil}
-    \label{user-story8}
-\end{table}
+% 9. Recomendaciones
+\begin{tablaHistoria}{Historia: Sugerencias automáticas de recursos}
+    \filaBlanca Descripción & Como estudiante, necesito recibir recomendaciones (videos, artículos) relacionados con mis tareas. \\
+    \filaGris Resultado & Lista de recursos recomendados generados automáticamente. \\
+    \filaBlanca Criterio & El sistema muestra 3-5 recursos basados en el título y descripción de la tarea.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Almacenamiento de recursos útiles\\
-    \hline
-    \textbf{Descripción: }Como usuario, necesito poder guardar las recomendaciones de consulta que considero útiles para poder 
-    acceder a ellas fácilmente cada vez que abra el detalle de la tarea sin tener que buscarlas nuevamente.\\
-    \hline
-    \textbf{Resultado: } Recomendaciones seleccionadas guardadas y visibles en el detalle de la tarea.\\
-    \hline
-    \textbf{Criterio de aceptación: }El usuario puede marcar recomendaciones como favoritas mediante un botón o ícono, estas se guardan 
-    permanentemente y aparecen destacadas cada vez que abre el detalle de la tarea.\\
-    \hline
-    \end{tabular}
-    \caption{Guardado de recomendaciones favoritas}
-    \label{user-story9}
-\end{table}
+% 10. Recomendaciones Perfil
+\begin{tablaHistoria}{Historia: Recomendaciones personalizadas por perfil}
+    \filaBlanca Descripción & Como usuario, necesito recomendaciones adaptadas a mi nivel de estudios y especialización. \\
+    \filaGris Resultado & Recomendaciones precisas según el grado académico del usuario. \\
+    \filaBlanca Criterio & El sistema utiliza los datos del perfil académico para filtrar la complejidad de los recursos.
+\end{tablaHistoria}
+\vspace{1em}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|p{15cm}|}
-    \hline
-    \textbf{Historia: } Feedback de recomendaciones para mejora del sistema\\
-    \hline
-    \textbf{Descripción: }Como usuario, necesito poder indicar si una recomendación de consulta fue útil o
-     no para que el sistema aprenda de mis preferencias y mejore las futuras sugerencias.\\
-    \hline
-    \textbf{Resultado: } Feedback del usuario registrado para mejorar el algoritmo de recomendaciones.\\
-    \hline
-    \textbf{Criterio de aceptación: } El usuario puede marcar una recomendación como "útil" o "no útil" mediante botones simples, 
-    el sistema almacena esta retroalimentación y la utiliza para personalizar futuras recomendaciones del usuario.\\
-    \hline
-    \end{tabular}
-    \caption{Feedback de recomendaciones}
-    \label{user-story10}
-\end{table}
+% 11. Guardado de favoritos
+\begin{tablaHistoria}{Historia: Almacenamiento de recursos útiles}
+    \filaBlanca Descripción & Como usuario, necesito guardar recomendaciones favoritas para acceder a ellas fácilmente. \\
+    \filaGris Resultado & Recomendaciones seleccionadas guardadas en el detalle de la tarea. \\
+    \filaBlanca Criterio & Ícono de favorito que ancla el recurso de forma permanente en la tarea.
+\end{tablaHistoria}
+\vspace{1em}
+
+% 12. Feedback
+\begin{tablaHistoria}{Historia: Feedback de recomendaciones}
+    \filaBlanca Descripción & Como usuario, necesito indicar si una sugerencia fue útil para mejorar futuras recomendaciones. \\
+    \filaGris Resultado & Feedback registrado para ajustar el algoritmo de IA. \\
+    \filaBlanca Criterio & Botones simples de "útil" / "no útil" que personalizan la experiencia futura.
+\end{tablaHistoria}
+\newpage

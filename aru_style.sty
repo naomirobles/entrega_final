@@ -16,6 +16,7 @@
 \RequirePackage{pdflscape} % Para páginas en horizontal
 \RequirePackage{anysize}   % Nota: geometry ya hace esto, pero lo mantengo si lo prefieres
 \RequirePackage{textcase}
+\usepackage{afterpage}
 
 % ==================== 3. GRÁFICOS Y COLORES ====================
 \RequirePackage{graphicx}
@@ -25,6 +26,7 @@
 \RequirePackage{float}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{fontawesome5}
+
 
 % ==================== 4. MATEMÁTICAS Y CIENCIA ====================
 \RequirePackage{amsmath, amssymb, amsthm, amsfonts}
@@ -39,6 +41,9 @@
 \RequirePackage{array}
 \RequirePackage{longtable}
 \RequirePackage{enumitem}
+\usepackage{tabularray}
+\usepackage{tabularx}
+\usepackage{colortbl}
 
 % ==================== 6. CAPTIONS Y FIGURAS ====================
 \RequirePackage{caption}
@@ -216,22 +221,61 @@
     fontupper=\scriptsize,
     top=8mm
 }
-
-% --- Estilo de Caja Redondeada para Tablas ---
-\newtcolorbox{aruTable}[1]{
+% Definición del entorno corregido
+\newtcolorbox{tablaAru}{
     enhanced,
-    clip upper,
-    colframe=aruPurple,      % Color del borde
-    colback=white,           % Color de fondo
-    boxrule=1pt,             % Grosor del borde
-    arc=6pt,                 % Radio de redondeo
-    auto outer arc,
+    arc=6pt,                         % Bordes redondeados
+    colframe=aruPurple,              % Color del borde exterior
+    colback=white,                   % Fondo de la caja
+    boxrule=1pt,                     % Grosor del borde
+    clip upper,                      % Corta el contenido para que respete la curva
+    left=0pt, right=0pt, top=0pt, bottom=0pt, % Eliminar márgenes internos de la caja
     boxsep=0pt,
-    top=0pt, bottom=0pt, left=0pt, right=0pt,
-    tabularx={>{\columncolor{aruPurple}\color{white}\bfseries}p{3.5cm}X}, % Columna 1 púrpura, Columna 2 flexible
-    title=#1,                % Título opcional
+    tabularx={
+        >{\columncolor{aruPurple}\color{white}\bfseries\centering}p{3.5cm} % Columna púrpura
+        >{\color{aruText}\raggedright\arraybackslash}X                   % Columna contenido
+    }
+}
+
+% =========================================================================
+% CONFIGURACIÓN DE ESTILO PARA TABLAS MODERNAS (ARU STYLE)
+% =========================================================================
+
+% Comandos para el cebreado (intercalado de filas)
+\newcommand{\filaGris}{\rowcolor{aruBg}}
+\newcommand{\filaBlanca}{\rowcolor{white}}
+\newcommand{\seccionTabla}[1]{\rowcolor{aruPurple!20}\multicolumn{2}{|c|}{\textbf{\color{aruText}#1}} \\}
+
+% 1. Entorno para REQUISITOS (2 columnas: Clave y Descripción)
+\newtcolorbox{tablaRequisitos}[1]{
+    enhanced, 
+    arc=8pt, 
+    colframe=aruPurple, 
+    colback=white, 
+    boxrule=1.2pt, 
+    clip upper,
+    boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt,
     fonttitle=\bfseries,
-    coltitle=white,
-    attach title to upper,
-    after upper={\par}
+    title=#1,
+    tabularx={
+        >{\columncolor{aruPurple}\color{black}\bfseries\centering}p{2.5cm} 
+        >{\color{aruText}\raggedright\arraybackslash}X
+    }
+}
+
+% 2. Entorno para HISTORIAS DE USUARIO (Cabecera lateral más ancha)
+\newtcolorbox{tablaHistoria}[1]{
+    enhanced, 
+    arc=8pt, 
+    colframe=aruPurple, 
+    colback=white, 
+    boxrule=1.2pt, 
+    clip upper,
+    boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt,
+    fonttitle=\bfseries,
+    title=#1,
+    tabularx={
+        >{\columncolor{aruPurple}\color{black}\bfseries\centering}p{3.8cm} 
+        >{\color{aruText}\raggedright\arraybackslash}X
+    }
 }

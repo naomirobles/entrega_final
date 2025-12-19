@@ -1,0 +1,365 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Deco2010}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f91c89f1cbe380a7379d3e93de0847e0}{%
+           family={Deco},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d441e1bf821272f5e915efe4e348b2c7}{%
+           family={Bender},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e822c5683aacd7afd95da91dd1bcb816}{%
+           family={Saer},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{97e8e07ca320bc446103c7854f459157}
+      \strng{fullhash}{83642ab9c18a8eae737fb87adcf837a5}
+      \strng{fullhashraw}{83642ab9c18a8eae737fb87adcf837a5}
+      \strng{bibnamehash}{83642ab9c18a8eae737fb87adcf837a5}
+      \strng{authorbibnamehash}{83642ab9c18a8eae737fb87adcf837a5}
+      \strng{authornamehash}{97e8e07ca320bc446103c7854f459157}
+      \strng{authorfullhash}{83642ab9c18a8eae737fb87adcf837a5}
+      \strng{authorfullhashraw}{83642ab9c18a8eae737fb87adcf837a5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biblioteca Digital de la Universidad Católica Argentina}
+      \field{month}{1}
+      \field{note}{[Online]. Available: \url{https://repositorio.uca.edu.ar/bitstream/123456789/5826/1/sistema-recomendador-recursos.pdf}}
+      \field{title}{Sistema recomendador de recursos educativos para la enseñanza de las ciencias}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://repositorio.uca.edu.ar/bitstream/123456789/5826/1/sistema-recomendador-recursos.pdf
+      \endverb
+      \verb{url}
+      \verb https://repositorio.uca.edu.ar/bitstream/123456789/5826/1/sistema-recomendador-recursos.pdf
+      \endverb
+    \endentry
+    \entry{MERLOT}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=920fc6dd5739b4f706ffe1bd77abe1ba}{%
+           family={{MERLOT}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {California State University}%
+      }
+      \strng{namehash}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{fullhash}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{fullhashraw}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{bibnamehash}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{authorbibnamehash}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{authornamehash}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{authorfullhash}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \strng{authorfullhashraw}{920fc6dd5739b4f706ffe1bd77abe1ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online]. Available: \url{https://merlot.org/merlot/}}
+      \field{title}{MERLOT: Multimedia Educational Resource for Learning and Online Teaching}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://merlot.org/merlot/
+      \endverb
+      \verb{url}
+      \verb https://merlot.org/merlot/
+      \endverb
+    \endentry
+    \entry{UNAM2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4a72b8ea759c4ca62c4be9a7758783d9}{%
+           family={{Dirección General de Repositorios Universitarios, Universidad Nacional Autónoma de México}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad Nacional Autónoma de México}%
+      }
+      \strng{namehash}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{fullhash}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{fullhashraw}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{bibnamehash}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{authorbibnamehash}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{authornamehash}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{authorfullhash}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \strng{authorfullhashraw}{4a72b8ea759c4ca62c4be9a7758783d9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{5}
+      \field{note}{[Online]. Available: \url{https://repositorio.unam.mx/}}
+      \field{title}{Repositorio Institucional de la {UNAM}}
+      \field{urlday}{7}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://repositorio.unam.mx/
+      \endverb
+      \verb{url}
+      \verb https://repositorio.unam.mx/
+      \endverb
+    \endentry
+    \entry{Caballar2025}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=47de33480eb24edced0662f4738fda3d}{%
+           family={Caballar},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=81b68eb44388c9d2e172ebc12b2a3189}{%
+           family={Stryker},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IBM}%
+      }
+      \strng{namehash}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{fullhash}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{fullhashraw}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{bibnamehash}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{authorbibnamehash}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{authornamehash}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{authorfullhash}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \strng{authorfullhashraw}{b90533d108b453efd0e6ca62f1d4c3cb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{journaltitle}{Think IBM Boletín}
+      \field{month}{3}
+      \field{note}{[Online]. Available: \url{https://www.ibm.com/mx-es/think/topics/recommendation-engine}}
+      \field{title}{Motor de recomendaciones}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/mx-es/think/topics/recommendation-engine
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/mx-es/think/topics/recommendation-engine
+      \endverb
+    \endentry
+    \entry{Okuboyejo2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1e0fdf9800e282f2a827b6cf5811cbd4}{%
+           family={Okuboyejo},
+           familyi={O\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=26d3f95f18b4f818b55d81a45cdc4fbc}{%
+           family={Aremo},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=96bb4b59d348d40027ff39e5a66be7a1}{%
+           family={Sowunmi},
+           familyi={S\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{827c744fb35a08a3347a3c473c883b0b}
+      \strng{fullhash}{d6d2eaf81c4f6d36cc0aeef8c7f5cbfb}
+      \strng{fullhashraw}{d6d2eaf81c4f6d36cc0aeef8c7f5cbfb}
+      \strng{bibnamehash}{d6d2eaf81c4f6d36cc0aeef8c7f5cbfb}
+      \strng{authorbibnamehash}{d6d2eaf81c4f6d36cc0aeef8c7f5cbfb}
+      \strng{authornamehash}{827c744fb35a08a3347a3c473c883b0b}
+      \strng{authorfullhash}{d6d2eaf81c4f6d36cc0aeef8c7f5cbfb}
+      \strng{authorfullhashraw}{d6d2eaf81c4f6d36cc0aeef8c7f5cbfb}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indian Journal of Science and Technology}
+      \field{month}{1}
+      \field{number}{4}
+      \field{title}{Implementing an Academic Task Manager: Findings from a Pilot Study}
+      \field{volume}{12}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.17485/ijst/2019/v12i4/141142
+      \endverb
+    \endentry
+    \entry{Diefenbach2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=377cc0c56327f1129450173036beb07e}{%
+           family={Diefenbach},
+           familyi={D\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=553b91e5c594241135da12a34b92cf91}{%
+           family={Müssig},
+           familyi={M\bibinitperiod},
+           given={Annemarie},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{fullhash}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{fullhashraw}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{bibnamehash}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{authorbibnamehash}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{authornamehash}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{authorfullhash}{204a922df8c69b95abbf123c447bd2cf}
+      \strng{authorfullhashraw}{204a922df8c69b95abbf123c447bd2cf}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1071-5819}
+      \field{journaltitle}{International Journal of Human-Computer Studies}
+      \field{note}{Strengthening gamification studies: critical challenges and new opportunities}
+      \field{title}{Counterproductive effects of gamification: An analysis on the example of the gamified task manager Habitica}
+      \field{volume}{127}
+      \field{year}{2019}
+      \field{pages}{190\bibrangedash 210}
+      \range{pages}{21}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ijhcs.2018.09.004
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581918305135
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581918305135
+      \endverb
+    \endentry
+    \entry{Torres2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a29c278c403e699e51eb74a251903cdc}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={C.\bibnamedelimi G.},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=b008484702ee1b9292943e8007327e71}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi Z.},
+           giveni={A\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=0b4f1a26ee8f722233a5f03726251a18}{%
+           family={Hernando},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi L.\bibnamedelimi O.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{085773fd4e817c62a45bd3c98ebe93d1}
+      \strng{fullhash}{43b7ed37c47eea968aae3dd0be2b6a20}
+      \strng{fullhashraw}{43b7ed37c47eea968aae3dd0be2b6a20}
+      \strng{bibnamehash}{43b7ed37c47eea968aae3dd0be2b6a20}
+      \strng{authorbibnamehash}{43b7ed37c47eea968aae3dd0be2b6a20}
+      \strng{authornamehash}{085773fd4e817c62a45bd3c98ebe93d1}
+      \strng{authorfullhash}{43b7ed37c47eea968aae3dd0be2b6a20}
+      \strng{authorfullhashraw}{43b7ed37c47eea968aae3dd0be2b6a20}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{RELIEVE - Revista Electrónica de Investigación y Evaluación Educativa}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{El impacto de la inteligencia artificial generativa en educación superior: una mirada desde la ética y la integridad académica}
+      \field{volume}{29}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.30827/relieve.v29i2.29134
+      \endverb
+    \endentry
+    \entry{talently-fullstack-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e0833499aa5eb346fed220ef193a0fd9}{%
+           family={{Talently}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{fullhash}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{fullhashraw}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{bibnamehash}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{authorbibnamehash}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{authornamehash}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{authorfullhash}{e0833499aa5eb346fed220ef193a0fd9}
+      \strng{authorfullhashraw}{e0833499aa5eb346fed220ef193a0fd9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online]. Available: \url{https://talently.tech/en/tools/mexico/salary/developer/fullstack-developer}}
+      \field{title}{Fullstack Developer en Mexico}
+      \field{urlday}{25}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://talently.tech/en/tools/mexico/salary/developer/fullstack-developer
+      \endverb
+      \verb{url}
+      \verb https://talently.tech/en/tools/mexico/salary/developer/fullstack-developer
+      \endverb
+    \endentry
+    \entry{glassdoor-ml-salary-2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a31869eb7928df122ceb2f81e27d7e85}{%
+           family={{Glassdoor}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{fullhash}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{fullhashraw}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{bibnamehash}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{authorbibnamehash}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{authornamehash}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{authorfullhash}{a31869eb7928df122ceb2f81e27d7e85}
+      \strng{authorfullhashraw}{a31869eb7928df122ceb2f81e27d7e85}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online]. Available: \url{https://www.glassdoor.co.in/Salaries/mexico-city-mexico-machine-learning-engineer-salary-SRCH_IL.0 2C18_IM1176_KO192C44.htm}}
+      \field{title}{Salary: Machine Learning Engineer in Mexico City, Mexico 2025}
+      \field{urlday}{25}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.glassdoor.co.in/Salaries/mexico-city-mexico-machine-learning-engineer-salary-SRCH_IL.02C18_IM1176_KO19%2C44.htm
+      \endverb
+      \verb{url}
+      \verb https://www.glassdoor.co.in/Salaries/mexico-city-mexico-machine-learning-engineer-salary-SRCH_IL.02C18_IM1176_KO19%2C44.htm
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
