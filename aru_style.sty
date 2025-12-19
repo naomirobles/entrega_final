@@ -1,44 +1,75 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{aru_style}[2023/10/27 Estilo Aru Task Manager]
 
-% ==================== PAQUETES ====================
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{geometry}
-\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage{booktabs} 
-\usepackage{siunitx}
-\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
-\usepackage{tikz}
+% ==================== 1. CODIFICACIÓN Y LENGUAJE ====================
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[many]{tcolorbox}
-\RequirePackage{xcolor}
+\RequirePackage[spanish, es-tabla]{babel} % es-tabla para que diga "Tabla" y no "Cuadro"
+
+% ==================== 2. DISEÑO DE PÁGINA Y FORMATO ====================
+\RequirePackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\RequirePackage{setspace}
+\onehalfspacing
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{pdflscape} % Para páginas en horizontal
+\RequirePackage{anysize}   % Nota: geometry ya hace esto, pero lo mantengo si lo prefieres
+\RequirePackage{textcase}
+
+% ==================== 3. GRÁFICOS Y COLORES ====================
+\RequirePackage{graphicx}
+\RequirePackage{xcolor} % Soporta [table, xcdraw] si se requiere
+\RequirePackage{tikz}
+\RequirePackage{pgfgantt}
+\RequirePackage{float}
+\RequirePackage[most]{tcolorbox}
 \RequirePackage{fontawesome5}
-\RequirePackage{helvet}
-\usepackage{titlesec}
-\usepackage[most]{tcolorbox}
-\usepackage{fontawesome5}
-\usepackage{textcase} % Para manejo avanzado de mayúsculas/minúsculas
+
+% ==================== 4. MATEMÁTICAS Y CIENCIA ====================
+\RequirePackage{amsmath, amssymb, amsthm, amsfonts}
+\RequirePackage{commath}
+\RequirePackage{cancel}
+\RequirePackage{siunitx}
+\RequirePackage{latexsym}
+
+% ==================== 5. TABLAS Y LISTAS ====================
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage{array}
+\RequirePackage{longtable}
+\RequirePackage{enumitem}
+
+% ==================== 6. CAPTIONS Y FIGURAS ====================
+\RequirePackage{caption}
+\RequirePackage{subcaption} % Reemplaza al antiguo subfigure
+\RequirePackage{sidecap}
+\RequirePackage{capt-of}
+\sidecaptionvpos{figure}{c}
+
+% ==================== 7. CÓDIGO Y ALGORITMOS ====================
+\RequirePackage{listings}
+\RequirePackage{listingsutf8}
+\RequirePackage{algorithm}
+\RequirePackage{algpseudocode}
+\RequirePackage{upquote}
+\RequirePackage{textcomp}
+
+% ==================== 8. BIBLIOGRAFÍA Y APÉNDICES ====================
+\RequirePackage[backend=biber, style=ieee, sorting=none]{biblatex}
+\RequirePackage[title, titletoc]{appendix}
+\renewcommand{\appendixname}{Apéndices}
+
+% ==================== 9. HIPERVÍNCULOS (SIEMPRE AL FINAL) ====================
+\RequirePackage{url}
+\RequirePackage[colorlinks=true, plainpages=true, citecolor=blue, linkcolor=black]{hyperref}
+
+% ==================== CONFIGURACIÓN ADICIONAL ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Ingeniería de Software para Sistemas Inteligentes}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\familydefault}{\sfdefault} % Usar Helvetica (similar a la imagen)
 \definecolor{dkgreen}{rgb}{0,0.6,0} 
 \definecolor{gray}{rgb}{0.5,0.5,0.5} 
@@ -47,6 +78,17 @@
 \definecolor{black}{rgb}{0, 0, 0}
 \definecolor{blue}{rgb}{0, 0.4648, 0.71}
 \definecolor{charcoal}{RGB}{54,69,79}
+
+\definecolor{aruPurple}{HTML}{9381DA}
+\definecolor{aruBg}{HTML}{F8F9FE}
+\definecolor{aruText}{HTML}{4A4A4A}
+\definecolor{pastelPink}{HTML}{FDE7F9}
+\definecolor{pastelBlue}{HTML}{E7F3FD}
+
+\definecolor{catCalculo}{HTML}{FDE7E7}
+\definecolor{catHistoria}{HTML}{E7FDF3}
+\definecolor{catEconomia}{HTML}{FFF4E5}
+\definecolor{catIngles}{HTML}{FDE7F9}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}          % Verde para comentarios
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}       % Gris para números de línea
@@ -82,17 +124,6 @@
 }
 
 \lstset{style=mystyle}
-% --- Paleta de Colores ---
-\definecolor{aruPurple}{HTML}{9381DA}
-\definecolor{aruBg}{HTML}{F8F9FE}
-\definecolor{aruText}{HTML}{4A4A4A}
-\definecolor{pastelPink}{HTML}{FDE7F9}
-\definecolor{pastelBlue}{HTML}{E7F3FD}
-% Colores de las categorías
-\definecolor{catCalculo}{HTML}{FDE7E7}
-\definecolor{catHistoria}{HTML}{E7FDF3}
-\definecolor{catEconomia}{HTML}{FFF4E5}
-\definecolor{catIngles}{HTML}{FDE7F9}
 
 \makeatletter
 \renewcommand{\section}[1]{%
@@ -122,7 +153,7 @@
 
 % --- Subsecciones con número (ej: 1.1 aru:taskmanager) ---
 \titleformat{\subsection}
-  {\color{aruPurple}\sffamily\huge\bfseries} % Formato general
+  {\color{aruPurple}\sffamily\Large\bfseries} % Formato general
   {\thesubsection} % Aquí incluimos el número de la subsección
   {1em} % Espacio entre el número y el texto
   {} % Aplicamos minúsculas solo al título
@@ -130,10 +161,10 @@
 
 % --- Subsubsecciones con número (ej: 1.1.1 módulos) ---
 \titleformat{\subsubsection}
-  {\color{aruPurple!80}\sffamily\Large\bfseries}
+  {\color{aruPurple!80}\sffamily\large\bfseries}
   {\thesubsubsection}
   {1em}
-  {\lowercase}
+  {}
   []
 
 % Re-ajuste de espaciado para acomodar los números
@@ -184,4 +215,23 @@
     after title={\hfill \faRegCircle}, % Círculo de checkbox
     fontupper=\scriptsize,
     top=8mm
+}
+
+% --- Estilo de Caja Redondeada para Tablas ---
+\newtcolorbox{aruTable}[1]{
+    enhanced,
+    clip upper,
+    colframe=aruPurple,      % Color del borde
+    colback=white,           % Color de fondo
+    boxrule=1pt,             % Grosor del borde
+    arc=6pt,                 % Radio de redondeo
+    auto outer arc,
+    boxsep=0pt,
+    top=0pt, bottom=0pt, left=0pt, right=0pt,
+    tabularx={>{\columncolor{aruPurple}\color{white}\bfseries}p{3.5cm}X}, % Columna 1 púrpura, Columna 2 flexible
+    title=#1,                % Título opcional
+    fonttitle=\bfseries,
+    coltitle=white,
+    attach title to upper,
+    after upper={\par}
 }
