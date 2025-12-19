@@ -16,7 +16,6 @@ Actualmente existe una brecha entre las aplicaciones de gestión de tareas y los
 \\\\
 Asimismo, tanto la educación básica como superior se está viendo mermada en los últimos años por los modelos de Inteligencia Artificial generativa, que si bien han fungido como una herramienta importante para la enseñanza-aprendizaje, también han tenido un impacto negativo sobre las habilidades de pensamiento crítico y abstracción de la comunidad estudiantil.
 \vspace{0.7cm}
-\pagebreak
 \section{Propuesta de solución}
 El proyecto plantea el desarrollo de una aplicación web responsiva de gestión de tareas académicas y profesionales que integre un motor de recomendaciones educativas basado en análisis de palabras clave.
 \\\\
@@ -62,71 +61,42 @@ De esta manera, la aplicación no solo permitirá organizar tareas, sino tambié
 
 \subsection{Materiales}
 \begin{itemize}
-    \item Una computadora por desarrollador con las siguientes caracteristicas minimas:
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{|p{3.5cm}|p{9cm}|}
-        \hline
-        Procesador: & Intel Core i3 de 7ª generación o AMD equivalente (2 núcleos, 2.0 GHz o más). \\
-        \hline
-         Memoria RAM: & al menos 4 GB  \\
-        \hline
-        Almacenamiento: & 128 GB SSD. \\
-        \hline
-        \end{tabular}
-        \label{tab:TABLA}
-    \end{table}
-
-    \item El desarrollador de ML, tiene que tener una computadora con las caracteristicas necesarias para probar diferentes modelos de LLMS.
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{|p{3.5cm}|p{9cm}|}
-        \hline
-        Procesador: &Intel Core i5/i7 de 8ª generación o AMD Ryzen 5/7 (al menos 4 núcleos físicos).\\
-        \hline
-         Memoria RAM: &  Mínimo: 16 GB RAM  \\
-        \hline
-        Almacenamiento: & 256 GB SSD \\
-        \hline
-        Tarjeta Gráfica: & GPU con 6 GB VRAM (ejemplo: NVIDIA GTX 1660 Ti, RTX 2060).\\
-        \hline  
-        \end{tabular}
-        \label{tab:TABLA}
-    \end{table}
+    \item Una computadora por desarrollador con las siguientes características mínimas:
     
-    \item De momento, se alojara la aplicacion en un entorno local, por lo que las caracteristicas para alojar la aplicación son parecidas al de desarrollador de ML.
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{|p{3.5cm}|p{9cm}|}
-        \hline
-        Procesador: &Intel Core i5/i7 de 8ª generación o AMD Ryzen 5/7 (al menos 4 núcleos físicos).\\
-        \hline
-         Memoria RAM: &  Mínimo: 16 GB RAM  \\
-        \hline
-        Almacenamiento: & 256 GB SSD \\
-        \hline
-        Tarjeta Gráfica: & GPU con 6 GB VRAM (ejemplo: NVIDIA GTX 1660 Ti, RTX 2060).\\
-        \hline  
-        \end{tabular}
-        \label{tab:TABLA}
-    \end{table}
+    \begin{aruTable}{}
+        Procesador:     & Intel Core i3 de 7ª generación o AMD equivalente (2 núcleos, 2.0 GHz o más). \\ \hline
+        Memoria RAM:    & Al menos 4 GB  \\ \hline
+        Almacenamiento: & 128 GB SSD. \\
+    \end{aruTable}
+
+    \item El desarrollador de ML debe contar con un equipo capaz de probar modelos LLM:
+    
+    \begin{aruTable}{}
+        Procesador:     & Intel Core i5/i7 de 8ª gen o AMD Ryzen 5/7 (4 núcleos físicos). \\ \hline
+        Memoria RAM:    & Mínimo: 16 GB RAM  \\ \hline
+        Almacenamiento: & 256 GB SSD \\ \hline
+        Tarjeta Gráfica:& GPU con 6 GB VRAM (ej. NVIDIA GTX 1660 Ti, RTX 2060). \\
+    \end{aruTable}
+    
+    \item Entorno local para despliegue (características similares a ML):
+    
+    \begin{aruTable}{}
+        Procesador:     & Intel Core i5/i7 de 8ª gen o AMD Ryzen 5/7 (4 núcleos físicos). \\ \hline
+        Memoria RAM:    & Mínimo: 16 GB RAM  \\ \hline
+        Almacenamiento: & 256 GB SSD \\ \hline
+        Tarjeta Gráfica:& GPU con 6 GB VRAM (ej. NVIDIA GTX 1660 Ti, RTX 2060). \\
+    \end{aruTable}
 \end{itemize}
 
-
-
-\pagebreak
 \section{Planeación}
-
 \subsection{Objetivos}
-
 \begin{itemize}
     \item Desarrollar un sistema que permita al usuario registrar sus habitos y tareas diarias
     \item Añadir espacios para que el usuario agregue datos que sirvan de contexto para las recomendaciones inteligentes.
     \item Implementar un modulo que realice recomendaciones inteligentes sobre como realizar los habitos y tareas registradas
     \item Realizar una interfaz intuitiva y atractiva que permita añadir las tareas y habitos de manera facil
 \end{itemize}
-
-
+\vspace{-1cm}
 \subsection{Alcances}
 \begin{itemize}
     \item Registro y seguimiento de tareas/hábitos.
@@ -136,7 +106,6 @@ De esta manera, la aplicación no solo permitirá organizar tareas, sino tambié
     \item Inicio de sesion
     \item Seccion de añadir datos para el contexto
 \end{itemize}
-
 \begin{landscape}
 \begin{ganttchart}[
     hgrid,
